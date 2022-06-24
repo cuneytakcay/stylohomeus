@@ -1,0 +1,61 @@
+.container {
+	.pro-grid {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: grid;
+		grid-gap: 30px;
+		padding: 30px 0 50px;
+
+		@media screen and (min-width: 500px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (min-width: 1025px) {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.pro-card {
+			height: fit-content;
+
+			.img-cont {
+				border-radius: 4px;
+				overflow: hidden;
+
+				img {
+					transition: transform 0.5s ease;
+				}
+
+				&:hover {
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+
+			.text-cont {
+				padding: 15px 0;
+
+				h3 a {
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: var(--teal);
+					}
+				}
+
+				p {
+					margin-bottom: 20px;
+				}
+
+				.read-more {
+					font-weight: 700;
+					color: var(--orange);
+
+					&:hover {
+						color: var(--teal);
+					}
+				}
+			}
+		}
+	}
+}

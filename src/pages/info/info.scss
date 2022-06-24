@@ -1,0 +1,35 @@
+.about {
+	max-width: 1140px;
+	margin: 0 auto;
+
+	.info {
+		margin-bottom: 50px;
+
+		.contact-us {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 20px;
+
+			.label {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.linkstyle {
+				font-weight: 600;
+				color: var(--orange);
+			}
+		}
+
+		table {
+			max-width: 400px;
+			width: 100%;
+
+			thead {
+				text-align: left;
+			}
+		}
+	}
+}

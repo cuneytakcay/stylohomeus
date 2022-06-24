@@ -1,0 +1,30 @@
+.sitemap {
+	padding: 60px 20px 100px;
+
+	li {
+		font-weight: 600;
+		margin-bottom: 15px;
+
+		&.sitemap-link {
+			color: var(--teal);
+		}
+
+		ul {
+			padding-left: 30px;
+			margin-top: 15px;
+
+			.sitemap-sublink {
+				color: var(--orange);
+				font-size: 1rem;
+			}
+		}
+
+		a {
+			transition: all 0.3s ease;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

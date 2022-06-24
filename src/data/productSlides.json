@@ -1,0 +1,44 @@
+[
+	{
+		"title": "Zebra Blinds",
+		"imgKey": "zebra",
+		"link": "zebra-blinds",
+		"description": "Zebra Blinds bring the best of both worlds with their practicality and vast range of design options. While the perfectly sheer stripes allow you to bring the luminous sunlight in, the opaque stripes will ensure you your privacy. Zebra blinds come in both mechanical, and motorized and remote control options."
+	},
+	{
+		"title": "Roller Shades",
+		"imgKey": "roller",
+		"link": "roller-shades",
+		"description": "Roller Shades, aka Roller Blinds are one of the prominent blind types seen in most places. Roller blades are convenient but when united with our vast color and pattern options, they become an even more attractive option. Roller Shades come in both mechanical, and motorized and remote control options."
+	},
+	{
+		"title": "Decorative Panel Blinds",
+		"imgKey": "decorative",
+		"link": "decorative-panel",
+		"description": ""
+	},
+	{
+		"title": "Exclusive Series",
+		"imgKey": "exclusive",
+		"link": "exclusive-series",
+		"description": ""
+	},
+	{
+		"title": "Curtains & Drapes",
+		"imgKey": "drapes",
+		"link": "curtains-drapes",
+		"description": "Curtains and Drapes are the perfect choice for a more classic, and royal look. The high quality fabrics we offer have many design options that can bring your imagination into life."
+	},
+	{
+		"title": "Vertical Fabric Blinds",
+		"imgKey": "vertical",
+		"link": "vertical-fabric",
+		"description": "Vertical Fabric Blinds are an easy to maintain option that reduce glare while letting ideal amount of sunlight into your room. These products have different types to cater your needs, from tightly woven panels for privacy, to vinyl to backings that help block out unwanted light."
+	},
+	{
+		"title": "Motorized",
+		"imgKey": "motorized",
+		"link": "motorized-shades",
+		"description": "Adapting to the world of technology our blinds offer motorized options that can be controlled with a remote control, instead of traditional hand-operated blinds. These products are made of great quality elements that will last longer than usual. With motorized shades, live smart not hard."
+	}
+]

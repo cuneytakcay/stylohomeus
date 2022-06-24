@@ -1,0 +1,19 @@
+.social-icons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	a {
+		color: var(--orange);
+		line-height: 0;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: var(--orange-50);
+		}
+
+		svg {
+			font-size: 1.625rem;
+		}
+	}
+}

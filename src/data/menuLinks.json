@@ -1,0 +1,24 @@
+[
+	{
+		"title": "Products",
+		"url": "products",
+		"subitems": [
+			{ "title": "Zebra Blinds", "url": "zebra-blinds" },
+			{ "title": "Roller Shades", "url": "roller-shades" },
+			{ "title": "Decorative Panel Blinds", "url": "decorative-panel" },
+			{ "title": "Double Mechanism", "url": "double-mechanism" },
+			{ "title": "Curtains & Drapes", "url": "curtains-drapes" },
+			{ "title": "Vertical Fabric Blinds", "url": "vertical-fabric" },
+			{ "title": "Exclusive Series", "url": "exclusive-series" },
+			{ "title": "Motorized Shades", "url": "motorized-shades" }
+		]
+	},
+	{
+		"title": "Gallery",
+		"url": "gallery"
+	},
+	{
+		"title": "Info",
+		"url": "info"
+	}
+]

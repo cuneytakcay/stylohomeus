@@ -1,0 +1,52 @@
+.secondary-menu {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 0 20px;
+	position: relative;
+
+	@media screen and (max-width: 480px) {
+		padding: 0 15px;
+	}
+
+	.item {
+		color: var(--white);
+		line-height: 0;
+		cursor: pointer;
+		transition: color 0.3s ease;
+
+		&.contact {
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			font-family: var(--font-body);
+			font-size: 1rem;
+
+			svg {
+				font-size: 1.375rem;
+				color: var(--orange);
+				transition: color 0.3s ease;
+			}
+
+			@media screen and (max-width: 1024px) {
+				span {
+					position: absolute;
+					width: 1px;
+					height: 1px;
+					padding: 0;
+					margin: -1px;
+					overflow: hidden;
+					clip: rect(0, 0, 0, 0);
+					white-space: nowrap;
+					border-width: 0;
+				}
+			}
+		}
+
+		&:hover {
+			svg {
+				color: var(--orange-50);
+			}
+		}
+	}
+}

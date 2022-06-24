@@ -1,0 +1,44 @@
+.header-cont {
+	box-shadow: 0 0 10px rgba(0 0 0 / 30%);
+
+	.banner,
+	.nav-cont {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 20px;
+
+		@media screen and (max-width: 480px) {
+			padding-left: 15px;
+		}
+
+		.logo {
+			max-width: 120px;
+
+			@media screen and (max-width: 640px) {
+				.dt {
+					display: none;
+				}
+			}
+
+			@media screen and (min-width: 641px) {
+				max-width: 165px;
+				padding: 0;
+
+				.mb {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.banner {
+		height: 40px;
+		background-color: var(--navy);
+	}
+
+	.nav-cont {
+		height: 70px;
+		background-color: var(--beige);
+	}
+}

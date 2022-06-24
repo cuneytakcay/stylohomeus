@@ -1,0 +1,57 @@
+.gallery {
+	max-width: 678px;
+	margin: 0 auto;
+
+	.splide__slide {
+		img {
+			border-radius: 4px;
+		}
+	}
+
+	.thumbs {
+		padding: 10px 0;
+
+		.splide__arrow {
+			height: 3rem;
+			background-color: var(--orange);
+			border: 1px solid var(--orange);
+			border-radius: 4px;
+			opacity: 1;
+			transition: all 0.25s ease;
+
+			&:hover {
+				background-color: var(--white);
+
+				svg {
+					fill: var(--orange);
+				}
+			}
+
+			&.splide__arrow--prev {
+				left: -12px;
+			}
+
+			&.splide__arrow--next {
+				right: -12px;
+			}
+
+			svg {
+				fill: var(--white);
+			}
+		}
+
+		.splide__slide {
+			border: none !important;
+
+			img {
+				filter: opacity(0.65);
+			}
+
+			&.is-active {
+				img {
+					filter: opacity(1);
+				}
+			}
+		}
+	}
+}
