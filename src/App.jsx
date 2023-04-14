@@ -10,7 +10,6 @@ import RollerShades from './pages/products/productsSubPages/RollerShades'
 import DoubleMechanism from './pages/products/productsSubPages/DoubleMechanism'
 import VerticalBlinds from './pages/products/productsSubPages/VerticalBlinds'
 import ZebraBlinds from './pages/products/productsSubPages/ZebraBlinds'
-import ExclusiveSeries from './pages/products/productsSubPages/ExclusiveSeries'
 import Gallery from './pages/gallery/Gallery'
 import Info from './pages/info/Info'
 import Sitemap from './pages/sitemap/Sitemap'
@@ -54,10 +53,6 @@ const App = () => {
 					<Route
 						path="/products/zebra-blinds"
 						element={<ZebraBlinds />}
-					/>
-					<Route
-						path="/products/exclusive-series"
-						element={<ExclusiveSeries />}
 					/>
 					<Route path="/gallery" element={<Gallery />} />
 					<Route path="/info" element={<Info />} />

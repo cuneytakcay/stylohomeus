@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react'
-import HeaderImage from '../../../components/headerImage/HeaderImage'
-import MetaInfo from '../../../utils/MetaInfo'
-import './subProducts.scss'
+import { useState, useEffect } from 'react';
+import HeaderImage from '../../../components/headerImage/HeaderImage';
+import MetaInfo from '../../../utils/MetaInfo';
+import './subProducts.scss';
 
 const ZebraBlinds = () => {
-	const [images, setImages] = useState([])
+	const [images, setImages] = useState([]);
 
 	useEffect(() => {
-		let imgArray = []
-		for (let i = 1; i <= 42; i++) {
-			imgArray.push(require(`../../../assets/images/zebra/zebra${i}.jpg`))
+		let imgArray = [];
+		for (let i = 1; i <= 41; i++) {
+			imgArray.push(require(`../../../assets/images/zebra/zebra${i}.jpg`));
 		}
 
-		setImages(imgArray)
-	}, [])
+		setImages(imgArray);
+	}, []);
 
 	return (
 		<>
@@ -24,29 +24,22 @@ const ZebraBlinds = () => {
 			<HeaderImage title="Zebra Blinds" imgPath="zebraheader" />
 			<div className="sub-products container">
 				<p>
-					Zebra Blinds bring the best of both worlds with their
-					practicality and vast range of design options. While the
-					perfectly sheer stripes allow you to bring the luminous
-					sunlight in, the opaque stripes will ensure you your
-					privacy. Zebra blinds come in both mechanical, and motorized
+					Zebra Blinds bring the best of both worlds with their practicality and
+					vast range of design options. While the perfectly sheer stripes allow
+					you to bring the luminous sunlight in, the opaque stripes will ensure
+					you your privacy. Zebra blinds come in both mechanical, and motorized
 					and remote control options.
 				</p>
 				<div className="image-collection">
 					{images.map((img, ind) => (
 						<div className="img-box" key={ind}>
-							<img
-								src={img}
-								alt=""
-								width="640"
-								height="480"
-								lazyload="true"
-							/>
+							<img src={img} alt="" width="640" height="480" lazyload="true" />
 						</div>
 					))}
 				</div>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default ZebraBlinds
+export default ZebraBlinds;

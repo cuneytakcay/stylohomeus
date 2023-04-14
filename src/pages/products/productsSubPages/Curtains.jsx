@@ -9,7 +9,7 @@ const Curtains = () => {
 
 	useEffect(() => {
 		let imgArray = [];
-		for (let i = 1; i <= 10; i++) {
+		for (let i = 1; i <= 9; i++) {
 			imgArray.push(require(`../../../assets/images/curtain/curtain${i}.jpg`));
 		}
 

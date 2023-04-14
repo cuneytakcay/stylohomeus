@@ -9,7 +9,6 @@ import './productSlider.scss'
 import decorative from '../../assets/images/productSlider/decorative.jpg'
 import drapes from '../../assets/images/productSlider/drapes.jpg'
 import roller from '../../assets/images/productSlider/roller.jpg'
-import exclusive from '../../assets/images/productSlider/exclusive.jpg'
 import vertical from '../../assets/images/productSlider/vertical.jpg'
 import zebra from '../../assets/images/productSlider/zebra.jpg'
 import motorized from '../../assets/images/productSlider/remote.jpg'
@@ -19,7 +18,6 @@ const ProductSlider = () => {
 		decorative,
 		drapes,
 		roller,
-		exclusive,
 		vertical,
 		zebra,
 		motorized,
