@@ -110,6 +110,7 @@ const ConsultationForm = () => {
 							type="text"
 							name="first_name"
 							onChange={handleFirstNameChange}
+							required
 						/>
 					</label>
 					<label>
@@ -118,19 +119,37 @@ const ConsultationForm = () => {
 							type="text"
 							name="last_name"
 							onChange={handleLastNameChange}
+							required
 						/>
 					</label>
 					<label>
 						Email:
-						<input type="text" name="email" onChange={handleEmailChange} />
+						<input
+							type="email"
+							name="email"
+							onChange={handleEmailChange}
+							required
+						/>
 					</label>
 					<label>
 						Phone:
-						<input type="text" name="phone" onChange={handlePhoneChange} />
+						<input
+							type="tel"
+							name="phone"
+							onChange={handlePhoneChange}
+							required
+							pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+							placeholder="xxx-xxx-xxxx"
+						/>
 					</label>
 					<label>
 						City:
-						<input type="text" name="city" onChange={handleCityChange} />
+						<input
+							type="text"
+							name="city"
+							onChange={handleCityChange}
+							required
+						/>
 					</label>
 					<label>
 						State:
@@ -149,6 +168,7 @@ const ConsultationForm = () => {
 						name="note"
 						rows="20"
 						onChange={handleNoteChange}
+						required
 					></textarea>
 				</label>
 				<button className="form-btn btn orange-btn">Submit</button>
