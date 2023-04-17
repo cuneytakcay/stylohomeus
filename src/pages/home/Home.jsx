@@ -2,6 +2,7 @@ import Hero from '../../components/hero/Hero'
 import ProductSlider from '../../components/productSlider/ProductSlider'
 import QuickInfo from '../../components/quickInfo/QuickInfo'
 import Testimonials from '../../components/testimonials/Testimonials'
+import ConsultationForm from '../../components/consultationForm/ConsultationForm'
 import MetaInfo from '../../utils/MetaInfo'
 
 import './home.scss'
@@ -18,6 +19,7 @@ const Home = () => {
 				<QuickInfo />
 				<ProductSlider />
 				<Testimonials />
+				<ConsultationForm />
 			</div>
 		</div>
 	)

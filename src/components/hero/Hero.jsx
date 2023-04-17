@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { HashLink as Link } from 'react-router-hash-link';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-import heroSlides from '../../data/heroSlides.json'
+import heroSlides from '../../data/heroSlides.json';
 
-import '@splidejs/splide/dist/css/splide.min.css'
-import './hero.scss'
+import '@splidejs/splide/dist/css/splide.min.css';
+import './hero.scss';
 
-import img01 from '../../assets/images/hero/heroheader-01.jpg'
-import img02 from '../../assets/images/hero/heroheader-02.jpg'
-import img03 from '../../assets/images/hero/heroheader-03.jpg'
-import img01Mb from '../../assets/images/hero/heroheader-mb-01.jpg'
-import img02Mb from '../../assets/images/hero/heroheader-mb-02.jpg'
-import img03Mb from '../../assets/images/hero/heroheader-mb-03.jpg'
+import img01 from '../../assets/images/hero/heroheader-01.jpg';
+import img02 from '../../assets/images/hero/heroheader-02.jpg';
+import img03 from '../../assets/images/hero/heroheader-03.jpg';
+import img01Mb from '../../assets/images/hero/heroheader-mb-01.jpg';
+import img02Mb from '../../assets/images/hero/heroheader-mb-02.jpg';
+import img03Mb from '../../assets/images/hero/heroheader-mb-03.jpg';
 
 const Hero = () => {
 	const images = {
@@ -21,7 +21,7 @@ const Hero = () => {
 		img01Mb,
 		img02Mb,
 		img03Mb,
-	}
+	};
 
 	const options = {
 		type: 'fade',
@@ -30,7 +30,7 @@ const Hero = () => {
 		gap: '0',
 		pagination: false,
 		lazyLoad: 'nearby',
-	}
+	};
 
 	return (
 		<div className="hero">
@@ -56,8 +56,12 @@ const Hero = () => {
 								</div>
 								<div className="text-cont">
 									<p className="text">{slide.title}</p>
-									<Link className="btn orange-btn" to="/info">
-										Get a Free Estimate
+									<Link
+										className="btn orange-btn"
+										to="#consultation-form"
+										smooth
+									>
+										Request a Consultation
 									</Link>
 								</div>
 							</div>
@@ -66,7 +70,7 @@ const Hero = () => {
 				</Splide>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Hero
+export default Hero;
