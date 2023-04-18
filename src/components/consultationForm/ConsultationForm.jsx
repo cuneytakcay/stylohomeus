@@ -2,45 +2,40 @@ import { useState } from 'react';
 import axios from 'axios';
 import './formFields.scss';
 
+const INITIAL_STATE = {
+	first_name: '',
+	last_name: '',
+	email: '',
+	phone: '',
+	city: '',
+	state: '',
+	note: '',
+};
+
 const ConsultationForm = () => {
-	const [firstName, setFirstName] = useState('');
-	const [lastName, setLastName] = useState('');
-	const [email, setEmail] = useState('');
-	const [phone, setPhone] = useState('');
-	const [city, setCity] = useState('');
-	const [state, setState] = useState('');
-	const [note, setNote] = useState('');
+	const [form, setForm] = useState(INITIAL_STATE);
 	const [message, setMessage] = useState('');
 	const [messageClass, setMessageClass] = useState('success');
 
-	const handleFirstNameChange = e => setFirstName(e.target.value);
-	const handleLastNameChange = e => setLastName(e.target.value);
-	const handleEmailChange = e => setEmail(e.target.value);
-	const handlePhoneChange = e => setPhone(e.target.value);
-	const handleCityChange = e => setCity(e.target.value);
-	const handleStateChange = e => setState(e.target.value);
-	const handleNoteChange = e => setNote(e.target.value);
-
-	const user = {
-		first_name: firstName,
-		last_name: lastName,
-		email,
-		phone: `(${phone.slice(0, 3)}) ${phone.slice(3, 6)}-${phone.slice(6, 10)}`,
-		city,
-		state,
-		note,
+	const handleChange = e => {
+		setForm({
+			...form,
+			[e.target.name]: e.target.value,
+		});
 	};
+
+	const { first_name, last_name, email, phone, city, state, note } = form;
 
 	const handleSubmit = async e => {
 		e.preventDefault();
 
 		axios
-			.post('https://api.apispreadsheets.com/data/dZ3N47q5taAWjUZV/', user)
+			.post('https://api.apispreadsheets.com/data/dZ3N47q5taAWjUZV/', form)
 			.then(res => {
 				if (res.status === 201) {
 					setMessage('Your request has been successfully submitted!');
-          setMessageClass('success');
-					clearForm();
+					setMessageClass('success');
+					setForm(INITIAL_STATE);
 				} else {
 					setMessage(
 						'An error has occurred while submitting the form! Please try again later.'
@@ -55,16 +50,6 @@ const ConsultationForm = () => {
 				);
 				setMessageClass('fail');
 			});
-	};
-
-	const clearForm = () => {
-		setFirstName('');
-		setLastName('');
-		setEmail('');
-		setPhone('');
-		setCity('');
-		setState('');
-		setNote('');
 	};
 
 	const states = [
@@ -130,8 +115,8 @@ const ConsultationForm = () => {
 						<input
 							type="text"
 							name="first_name"
-							value={firstName}
-							onChange={handleFirstNameChange}
+							value={first_name}
+							onChange={handleChange}
 							required
 						/>
 					</label>
@@ -140,8 +125,8 @@ const ConsultationForm = () => {
 						<input
 							type="text"
 							name="last_name"
-							value={lastName}
-							onChange={handleLastNameChange}
+							value={last_name}
+							onChange={handleChange}
 							required
 						/>
 					</label>
@@ -151,7 +136,7 @@ const ConsultationForm = () => {
 							type="email"
 							name="email"
 							value={email}
-							onChange={handleEmailChange}
+							onChange={handleChange}
 							required
 						/>
 					</label>
@@ -161,7 +146,7 @@ const ConsultationForm = () => {
 							type="tel"
 							name="phone"
 							value={phone}
-							onChange={handlePhoneChange}
+							onChange={handleChange}
 							required
 						/>
 					</label>
@@ -171,13 +156,13 @@ const ConsultationForm = () => {
 							type="text"
 							name="city"
 							value={city}
-							onChange={handleCityChange}
+							onChange={handleChange}
 							required
 						/>
 					</label>
 					<label>
 						State:
-						<select name="state" value={state} onChange={handleStateChange}>
+						<select name="state" value={state} onChange={handleChange}>
 							{states.map(state => (
 								<option key={state} value={state}>
 									{state}
@@ -192,7 +177,7 @@ const ConsultationForm = () => {
 						name="note"
 						rows="10"
 						value={note}
-						onChange={handleNoteChange}
+						onChange={handleChange}
 						required
 					></textarea>
 				</label>
